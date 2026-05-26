@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AURA | The Local-First Manifesto</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="site-nav" aria-label="Main navigation">
+      <div class="nav-inner">
+        <a class="brand" href="index.html">AURA</a>
+        <div class="nav-links">
+          <a href="index.html">Product</a>
+          <a class="active" href="philosophy.html">Philosophy</a>
+          <a href="security.html">Security</a>
+        </div>
+        <a class="button primary mono" href="security.html">Reserve System</a>
+      </div>
+    </nav>
+
+    <main class="page subpage">
+      <header class="sub-hero reveal">
+        <h1 class="page-title">The Local-First Manifesto.</h1>
+        <p class="lead">Smart-home intelligence belongs inside the house. AURA uses a local LLM to understand commands and control appliances on your network, so everyday automation can stay private, fast, and under your control.</p>
+      </header>
+
+      <section class="section">
+        <div class="manifesto-row reveal">
+          <aside class="sticky-label">
+            <h2><span class="material-symbols-outlined">shield_lock</span>The Privacy Paradox</h2>
+            <div class="tiny-rule"></div>
+          </aside>
+          <div class="body-copy">
+            <p>Most smart-home systems depend on cloud assistants to understand even simple requests. That adds delay, creates internet dependency, and sends household commands outside the home before a light, fan, plug, or appliance can respond.</p>
+            <p>AURA is built around a different idea: run the language understanding locally, then send clear actions to the smart devices already in the house. The system focuses on command interpretation, device routing, and appliance control without making the cloud the center of the home.</p>
+            <div class="glass quote-card" data-hover>
+              <div class="label">Project Goal</div>
+              <blockquote>Turn natural language commands into reliable smart-appliance actions using a local LLM running inside the home network.</blockquote>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-intro reveal">
+          <h2 class="section-heading"><span class="material-symbols-outlined" style="color: var(--purple-soft)">memory</span> Hardware-Rooted Intelligence</h2>
+          <p>The local LLM is the control layer. It interprets what the user wants, chooses the matching device or scene, and sends commands to appliances through the home automation setup.</p>
+        </div>
+
+        <div class="bento">
+          <article class="glass wide-card reveal" data-hover>
+            <img src="assets/local-llm-crystal.png" alt="Amber crystal representing secure localized data storage" />
+            <div class="overlay">
+              <span class="chip" style="color: var(--cyan)">Local LLM Controller</span>
+              <h3>Command to appliance.</h3>
+            </div>
+          </article>
+          <article class="glass card stat-card reveal" data-hover>
+            <span class="number">0</span>
+            <span class="mono-label">Cloud Calls Needed</span>
+            <p>Routine commands can be understood locally and handled through devices on the home network.</p>
+          </article>
+        </div>
+
+        <div class="rhythm reveal" style="margin-top: 120px">
+          <div>
+            <h2 class="section-heading" style="font-size: 28px">Designing for Human Rhythm</h2>
+            <div class="body-copy" style="font-size: 17px">
+              <p>Technology should make appliance control easier, not force every action through a different app or switch.</p>
+              <p>With a local LLM, the user can say what they want in normal language: turn on the bedroom fan, make the room brighter, switch to movie mode, or shut everything down. AURA translates that intent into the correct device commands.</p>
+            </div>
+          </div>
+          <div class="glass mini-dashboard" data-hover>
+            <div style="display:flex; justify-content:space-between; gap:16px; padding-bottom:18px; border-bottom:1px solid var(--border)">
+              <span class="mono-label" style="color: var(--muted)">Command State</span>
+              <span class="chip"><span class="material-symbols-outlined" style="font-size:14px;color:var(--amber)">wb_sunny</span>Evening Mode</span>
+            </div>
+            <div class="mini-line">
+              <span>Living Room Lights</span>
+              <span class="mono-label" style="color: var(--muted)">Warm - 42%</span>
+            </div>
+            <div class="track"><span style="width:42%"></span></div>
+            <div class="mini-line">
+              <span>Fan Speed</span>
+              <span class="mono-label" style="color: var(--muted)">Low</span>
+            </div>
+            <div class="track"><span style="width:15%; background:var(--purple-soft)"></span></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">AURA</div>
+        <div class="copyright">© 2026 AURA. Local smart-home automation.</div>
+        <div class="footer-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Support</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
