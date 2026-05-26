@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AURA | Invisible Utility</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="site-nav" aria-label="Main navigation">
+      <div class="nav-inner">
+        <a class="brand" href="index.html">AURA</a>
+        <div class="nav-links">
+          <a class="active" href="index.html">Product</a>
+          <a href="philosophy.html">Philosophy</a>
+          <a href="security.html">Security</a>
+        </div>
+        <a class="button primary" href="#atmosphere">Try AURA Free</a>
+      </div>
+    </nav>
+
+    <main class="page">
+      <section class="hero">
+        <img class="hero-orb" src="assets/hero-orb.png" alt="" />
+        <div class="hero-copy reveal">
+          <h1>Invisible Utility.</h1>
+          <p>A local LLM smart-home system that understands your commands and controls appliances inside your house. Fast, private automation without sending everyday home requests to the cloud.</p>
+        </div>
+        <div class="scroll-cue">
+          <span>Scroll to explore</span>
+          <span class="material-symbols-outlined">keyboard_arrow_down</span>
+        </div>
+      </section>
+
+      <section class="section two-col" id="sense">
+        <div class="glass image-card reveal" data-hover>
+          <img src="assets/sound-wave.png" alt="Abstract glass sound wave representing ambient sensing" />
+        </div>
+        <div class="text-stack reveal">
+          <span class="chip" style="color: var(--purple-soft)">Local Commands</span>
+          <h2>Speak. It Handles the Home.</h2>
+          <p>AURA listens for your instruction, understands the intent through a local LLM, and turns it into appliance actions. Ask for lights, fans, climate, plugs, or scenes, and the system routes the command to the right device.</p>
+          <ul class="rule-list">
+            <li>
+              <span class="material-symbols-outlined">all_inclusive</span>
+              <div>
+                <strong>Command to Appliance</strong>
+                <p>Natural language requests become device actions inside your local network.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="edge">
+        <div class="text-stack reveal" style="text-align: center; max-width: 760px; margin: 0 auto 52px">
+          <h2>Local LLM Control.</h2>
+          <p>Your home automation runs through a local language model that interprets commands and coordinates smart appliances without depending on cloud assistants.</p>
+        </div>
+        <div class="bento">
+          <article class="glass card square reveal" data-hover>
+            <span class="material-symbols-outlined icon">memory</span>
+            <h3>Local LLM Hub</h3>
+            <p>Understands spoken or typed commands and maps them to appliance actions.</p>
+          </article>
+          <article class="glass wide-card reveal" data-hover>
+            <img src="assets/local-control-core.png" alt="Cinematic local processing core in a dark room" />
+            <div class="overlay">
+              <span class="chip">Runs on Your Network</span>
+              <h3>Smart control stays at home.</h3>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section atmosphere" id="atmosphere">
+        <div>
+          <span class="mono-label">Automation Scenes</span>
+          <h2 class="section-heading">The Atmosphere<br />of Home.</h2>
+          <p class="lead">Use simple commands to switch room scenes. The local LLM understands your intent and controls the appliances that create the right environment.</p>
+          <div class="mode-list">
+            <div class="mode-item active" style="color: var(--purple-soft)" data-mode="gaming">
+              <h3>Gaming Mode</h3>
+              <p>Dim the lights, turn on accent LEDs, and power the entertainment setup.</p>
+            </div>
+            <div class="mode-item" style="color: var(--amber)" data-mode="cozy">
+              <h3>Evening Mode</h3>
+              <p>Warm lights, slower fan speed, and a comfortable room scene.</p>
+            </div>
+            <div class="mode-item" style="color: var(--cyan)" data-mode="focus">
+              <h3>Focus Mode</h3>
+              <p>Bright lighting, quiet appliances, and a work-ready setup.</p>
+            </div>
+          </div>
+        </div>
+        <div class="glass mode-frame" data-hover>
+          <img class="active" data-mode-image="gaming" src="assets/room-gaming.png" alt="Gaming atmosphere room" />
+          <img data-mode-image="cozy" src="assets/room-cozy.png" alt="Cozy atmosphere room" />
+          <img data-mode-image="focus" src="assets/room-focus.png" alt="Deep work atmosphere room" />
+          <div class="mode-controls" aria-label="Room image controls">
+            <button class="mode-swipe" type="button" data-mode-step="-1" aria-label="Previous room image">
+              <span class="material-symbols-outlined">chevron_left</span>
+            </button>
+            <button class="mode-swipe" type="button" data-mode-step="1" aria-label="Next room image">
+              <span class="material-symbols-outlined">chevron_right</span>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">AURA</div>
+        <div class="footer-links">
+          <a href="philosophy.html">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="security.html">Local AI</a>
+          <a href="#">Documentation</a>
+        </div>
+        <div class="copyright">© 2026 AURA Systems. Local smart-home automation.</div>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
