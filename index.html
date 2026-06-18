@@ -21,7 +21,7 @@
 
     <main class="page">
       <section class="hero">
-        <img class="hero-orb" src="assets/hero-orb.png" alt="" />
+        <img class="hero-orb" src="assets/hero-orb.png" alt="" width="512" height="512" decoding="async" />
         <div class="hero-copy reveal">
           <h1>Invisible Utility.</h1>
           <p>A local LLM smart-home system that understands your commands and controls appliances inside your house. Fast, private automation without sending everyday home requests to the cloud.</p>
@@ -34,7 +34,7 @@
 
       <section class="section two-col" id="sense">
         <div class="glass image-card reveal" data-hover>
-          <img src="assets/sound-wave.png" alt="Abstract glass sound wave representing ambient sensing" />
+          <img src="assets/sound-wave.png" alt="Abstract glass sound wave representing ambient sensing" width="512" height="512" loading="lazy" decoding="async" />
         </div>
         <div class="text-stack reveal">
           <span class="chip" style="color: var(--purple-soft)">Local Commands</span>
@@ -64,7 +64,7 @@
             <p>Understands spoken or typed commands and maps them to appliance actions.</p>
           </article>
           <article class="glass wide-card reveal" data-hover>
-            <img src="assets/local-control-core.png" alt="Cinematic local processing core in a dark room" />
+            <img src="assets/local-control-core.png" alt="Cinematic local processing core in a dark room" width="512" height="286" loading="lazy" decoding="async" />
             <div class="overlay">
               <span class="chip">Runs on Your Network</span>
               <h3>Smart control stays at home.</h3>
@@ -79,24 +79,24 @@
           <h2 class="section-heading">The Atmosphere<br />of Home.</h2>
           <p class="lead">Use simple commands to switch room scenes. The local LLM understands your intent and controls the appliances that create the right environment.</p>
           <div class="mode-list">
-            <div class="mode-item active" style="color: var(--purple-soft)" data-mode="gaming">
+            <button class="mode-item active" type="button" style="color: var(--purple-soft)" data-mode="gaming" aria-pressed="true">
               <h3>Gaming Mode</h3>
               <p>Dim the lights, turn on accent LEDs, and power the entertainment setup.</p>
-            </div>
-            <div class="mode-item" style="color: var(--amber)" data-mode="cozy">
+            </button>
+            <button class="mode-item" type="button" style="color: var(--amber)" data-mode="cozy" aria-pressed="false">
               <h3>Evening Mode</h3>
               <p>Warm lights, slower fan speed, and a comfortable room scene.</p>
-            </div>
-            <div class="mode-item" style="color: var(--cyan)" data-mode="focus">
+            </button>
+            <button class="mode-item" type="button" style="color: var(--cyan)" data-mode="focus" aria-pressed="false">
               <h3>Focus Mode</h3>
               <p>Bright lighting, quiet appliances, and a work-ready setup.</p>
-            </div>
+            </button>
           </div>
         </div>
         <div class="glass mode-frame" data-hover>
-          <img class="active" data-mode-image="gaming" src="assets/room-gaming.png" alt="Gaming atmosphere room" />
-          <img data-mode-image="cozy" src="assets/room-cozy.png" alt="Cozy atmosphere room" />
-          <img data-mode-image="focus" src="assets/room-focus.png" alt="Deep work atmosphere room" />
+          <img class="active" data-mode-image="gaming" src="assets/room-gaming.png" alt="Gaming atmosphere room" width="512" height="286" loading="lazy" decoding="async" />
+          <img data-mode-image="cozy" src="assets/room-cozy.png" alt="Cozy atmosphere room" width="1376" height="768" loading="lazy" decoding="async" />
+          <img data-mode-image="focus" src="assets/room-focus.png" alt="Deep work atmosphere room" width="1376" height="768" loading="lazy" decoding="async" />
           <div class="mode-controls" aria-label="Room image controls">
             <button class="mode-swipe" type="button" data-mode-step="-1" aria-label="Previous room image">
               <span class="material-symbols-outlined">chevron_left</span>
@@ -118,7 +118,7 @@
           <a href="security.html">Local AI</a>
           <a href="#">Documentation</a>
         </div>
-        <div class="copyright">© 2026 AURA Systems. Local smart-home automation.</div>
+        <div class="copyright">&copy; 2026 AURA Systems. Local smart-home automation.</div>
       </div>
     </footer>
 

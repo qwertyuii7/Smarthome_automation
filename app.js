@@ -1,18 +1,24 @@
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.12 }
-);
+const revealItems = document.querySelectorAll(".reveal");
 
-document.querySelectorAll(".reveal").forEach((element) => {
-  revealObserver.observe(element);
-});
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
+
+  revealItems.forEach((element) => {
+    revealObserver.observe(element);
+  });
+} else {
+  revealItems.forEach((element) => element.classList.add("visible"));
+}
 
 document.querySelectorAll("[data-hover]").forEach((card) => {
   card.addEventListener("mousemove", (event) => {
@@ -28,10 +34,14 @@ const modeOrder = [...modeItems].map((item) => item.dataset.mode);
 let activeMode = modeOrder[0];
 
 function setMode(name) {
+  if (!name) return;
+
   activeMode = name;
 
   modeItems.forEach((item) => {
-    item.classList.toggle("active", item.dataset.mode === name);
+    const isActive = item.dataset.mode === name;
+    item.classList.toggle("active", isActive);
+    item.setAttribute("aria-pressed", String(isActive));
   });
 
   modeImages.forEach((image) => {
@@ -45,6 +55,8 @@ modeItems.forEach((item) => {
 
 document.querySelectorAll("[data-mode-step]").forEach((button) => {
   button.addEventListener("click", () => {
+    if (!modeOrder.length) return;
+
     const currentIndex = Math.max(0, modeOrder.indexOf(activeMode));
     const step = Number(button.dataset.modeStep);
     const nextIndex = (currentIndex + step + modeOrder.length) % modeOrder.length;
@@ -52,7 +64,7 @@ document.querySelectorAll("[data-mode-step]").forEach((button) => {
   });
 });
 
-if (modeItems.length) {
+if (modeItems.length && "IntersectionObserver" in window) {
   const modeObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
